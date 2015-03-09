@@ -4,4 +4,5 @@ var checkUser = function(){
   if(username === 'admin' && password === 'password'){
     window.location = 'file:///Users/DennsYang/HackReactor/2015-02-solo/client/dashboard.html';
   }
+  console.log('WRONG user');
 };
