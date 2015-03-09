@@ -6,3 +6,7 @@ var checkUser = function(){
   }
   console.log('WRONG user');
 };
+
+var post = function(){
+  window.location = 'file:///Users/DennsYang/HackReactor/2015-02-solo/client/post.html';
+};
