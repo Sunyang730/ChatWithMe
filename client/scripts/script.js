@@ -2,6 +2,19 @@ $(function(){
   //storage of messages
   var messages =[];
 
+  //random message generator
+  var msgGenerator = function(){
+    for(var i = 0; i < 8; i++){
+      var message = {
+        userid: '00'+ (i * 15),
+        username: 'whatever' + i,
+        message: 'random message' + i
+      };
+      messages.push(message);
+    }
+  }();
+
+
   //validate user
 
   var checkUser = function(){
@@ -35,4 +48,6 @@ $(function(){
     var msg = $('.inputBox').val();
     postMsg(msg);
   });
+
+
 });
