@@ -14,7 +14,7 @@ $(function(){
     }
   }();
 
-
+  console.log(messages);
   //validate user
 
   var checkUser = function(){
@@ -47,6 +47,10 @@ $(function(){
   $('.send').on('click', function(){
     var msg = $('.inputBox').val();
     postMsg(msg);
+  });
+
+  $('.signIn').on('click', function(){
+    checkUser();
   });
 
 
