@@ -1,20 +1,38 @@
-//validate user
+$(function(){
+  //storage of messages
+  var messages =[];
 
-var checkUser = function(){
-  var username = 'admin';
-  var password = 'password';
-  if(username === 'admin' && password === 'password'){
-    window.location = 'file:///Users/DennsYang/HackReactor/2015-02-solo/client/dashboard.html';
-  }
-  console.log('WRONG user');
-};
+  //validate user
 
-//redirect user to post page
+  var checkUser = function(){
+    var username = 'admin';
+    var password = 'password';
+    if(username === 'admin' && password === 'password'){
+      window.location = 'file:///Users/DennsYang/HackReactor/2015-02-solo/client/dashboard.html';
+    }
+    console.log('WRONG user');
+  };
 
-var post = function(){
-  window.location = 'file:///Users/DennsYang/HackReactor/2015-02-solo/client/post.html';
-};
+  //redirect user to post page
+
+  var post = function(){
+    window.location = 'file:///Users/DennsYang/HackReactor/2015-02-solo/client/post.html';
+  };
 
 
-//post message
+  //post message
 
+  var postMsg = function(msg){
+    var message = {
+      userid: '001',
+      username: 'admin',
+      message: msg
+    };
+    messages.push(message);
+  };
+
+  $('.send').on('click', function(){
+    var msg = $('.inputBox').val();
+    postMsg(msg);
+  });
+});
