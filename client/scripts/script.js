@@ -1,3 +1,5 @@
+//validate user
+
 var checkUser = function(){
   var username = 'admin';
   var password = 'password';
@@ -7,6 +9,12 @@ var checkUser = function(){
   console.log('WRONG user');
 };
 
+//redirect user to post page
+
 var post = function(){
   window.location = 'file:///Users/DennsYang/HackReactor/2015-02-solo/client/post.html';
 };
+
+
+//post message
+
