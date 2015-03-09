@@ -17,28 +17,37 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
+Chat With Me
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
 ## Sub-Heading ##
+Talk to random people!
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
 
 ## Summary ##
+ChatWithMe app allows you to chat with random people each day. It limits the amount of message you can post so you won't be overwhelm.
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
 ## Problem ##
+You don't want to talk to people you know sometimes. What is a better way to share your feeling and maybe get a feedback?
   > Describe the problem your product solves.
 
 ## Solution ##
+You post a message and random people in the world will received your message and may or may not reply to it.
   > Describe how your product elegantly solves the problem.
 
 ## Quote from You ##
+  > Don't talk to your friend about your day, talk to a stranger! - Dennis Yang
   > A quote from a spokesperson in your company.
 
 ## How to Get Started ##
+Login with your Google, Twitter, or Facebook account and send a message!
   > Describe how easy it is to get started.
 
 ## Customer Quote ##
+  > I LOVE IT - Customer 1
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
 ## Closing and Call to Action ##
+MIA
   > Wrap it up and give pointers where the reader should go next.
