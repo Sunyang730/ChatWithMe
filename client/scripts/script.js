@@ -53,5 +53,9 @@ $(function(){
     checkUser();
   });
 
+  $('#post').on('click', function(){
+    post();
+  });
+
 
 });
