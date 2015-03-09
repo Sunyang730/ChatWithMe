@@ -1,0 +1,25 @@
+{
+  "name": "ChatWithMe",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Sunyang730/ChatWithMe",
+  "authors": [
+    "Dennis Yang <sunyang730@gmail.com>"
+  ],
+  "description": "Chat with random people",
+  "main": "index.html",
+  "keywords": [
+    "chat",
+    "message",
+    "random",
+    "strangers"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

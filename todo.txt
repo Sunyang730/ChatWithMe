@@ -1,0 +1,52 @@
+- Allow user to login
+  - authenicate user 
+  - if user doesn't exist or password not match, send a message of not exist
+- Allow user to create account
+  - create the account and send user to their home page. 
+
+User home page. 
+  - Retrieve message for user
+    - Display the original message
+    - Display the replied message
+  - Delete message
+    - message will be deleted after the user finish reading the message.
+    - message will be deleted after user finish reading.
+  -Posting message
+    - user allow to post 5 messages
+    - Replying message consider as a post
+
+Limits
+  - users have 6 (allowence) post or reply each day. 
+  - allowence will refresh everyday.
+  - allowence will deduct when user send out a message. (done in server side)
+
+
+  3 option
+    - retrieve my messages
+    - chat with strangers
+    - Post a message
+
+
+
+Technical Ideas
+-Client side
+ -store messages to model
+ -postLimit decrement after post/reply
+ -retrieve replied messages from the server/check my reply
+ -Allow user to reply with their postLimit. 
+ -Allow user to post new messages
+ -
+
+
+
+-database side
+ -store
+  -messages
+  -repliedId = userId
+  -userId
+  -postLimit
+
+  MVP
+  -setup PARSE with app
+  -allow user to post and retrieve messages with their log in
+  -
