@@ -3,7 +3,7 @@ angular.module('ChatWithMe.services', [])
   var post = function(msg){
     return $http({
       method: 'POST',
-      url: 'api/msg/post',
+      url: '/api/msg/post',
       data: msg
     })
     .then(function(resp){
@@ -11,6 +11,7 @@ angular.module('ChatWithMe.services', [])
     });
   };
   return {
+    post: post
 
   };  
 })
