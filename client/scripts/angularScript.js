@@ -1,21 +1,11 @@
-angular.module('ChatWithMe.auth', ['firebase'])
-.controller('AuthController', ['$scope', '$location', '$firebaseArray', function($scope, $location, $firebaseArray){
-  var ref = new Firebase("https://chatwithmehr.firebaseio.com/");
+angular.module('ChatWithMe.auth', [])
+.controller('AuthController', function($scope, Auth){
   $scope.user = {};
   
   $scope.signup = function(){
-    ref.createUser({
-      email: $scope.user.email,
-      password: $scope.user.password
-
-    }, function(error, userData){
-      if(error){
-        console.log("Error creating user", error.message);
-      } else {
-        console.log("Successfully created user account with uid: ", userData);
-      }
+    Auth.signup($scope.user).then(function(data){
+      console.log(data);
     });
-    
   };
 
   $scope.signin = function(){
@@ -32,5 +22,5 @@ angular.module('ChatWithMe.auth', ['firebase'])
       }
     });
   };
-}]);
+});
 

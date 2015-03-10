@@ -1,5 +1,6 @@
 angular.module('ChatWithMe', [
   'ChatWithMe.auth',
+  'ChatWithMe.services',
   'ngRoute'
   ])
 .config(function($routeProvider){

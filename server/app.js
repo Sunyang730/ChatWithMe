@@ -11,9 +11,11 @@ var Rmsgs = require('../db/collections/replymessages');
 
 app.use(express.static('client'));
 
-app.get('/signin', function(req, res){
-  res.send();
+app.post('/api/users/signup', function(req, res){
+  res.send('I like you');
 });
+
+
 
 var port = 4568;
 console.log('Listening on port :',port);
