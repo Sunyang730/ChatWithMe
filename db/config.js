@@ -1,5 +1,4 @@
 var Bookshelf = require('bookshelf');
-var path = require('path');
 
 var db = Bookshelf.initialize({
   client: 'mysql',
