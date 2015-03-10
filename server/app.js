@@ -26,7 +26,7 @@ app.post('/api/users/signin', function(req, res){
 });
 //Post request for new user sign up
 app.post('/api/users/signup', function(req, res){
-  new User({'username': req.body.email}).fetch().then(function(found){
+  User({'username': req.body.email}).fetch().then(function(found){
     if(found){
       res.send(409, "User exist");
     } else {
@@ -56,7 +56,7 @@ app.post('/api/msg/post', function(req, res){
 
 //Get request for user messages
 app.get('/api/msg/getUserMsg', function(req, res){
-  new Pmsg({'user_id': req.query.userid}).fetchAll()
+  Pmsg.query({where: {user_id: req.query.userid}}).fetchAll()
     .then(function(msgs){
       var parseMsgs = msgs.toJSON();
       res.send(200, parseMsgs);

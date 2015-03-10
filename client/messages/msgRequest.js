@@ -6,9 +6,8 @@ angular.module('ChatWithMe.msgRequest', [])
     $scope.postMsg = function(){
       $scope.msg.userid = $window.localStorage.getItem('userId');
       Msg.post($scope.msg).then(function(data){
-      
+        $scope.msg.msg = '';
       });
-      $scope.msg.msg = '';
     };
 
   
