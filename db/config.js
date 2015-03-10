@@ -44,6 +44,7 @@ db.knex.schema.hasTable('replymessages').then(function(exists) {
     db.knex.schema.createTable('replymessages', function (rmsg) {
       rmsg.increments('id').primary();
       rmsg.string('rmsg');
+      rmsg.integer('user_id');
       rmsg.timestamps();
     }).then(function (table) {
       console.log('Created Table', table);
