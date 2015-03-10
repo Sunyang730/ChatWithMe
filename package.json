@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Sunyang730/ChatWithMe/issues"
   },
-  "homepage": "https://github.com/Sunyang730/ChatWithMe"
+  "homepage": "https://github.com/Sunyang730/ChatWithMe",
+  "dependencies": {
+    "express": "^4.12.2"
+  }
 }
