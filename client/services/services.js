@@ -1,5 +1,19 @@
 angular.module('ChatWithMe.services', [])
+.factory('Msg', function($http){
+  var post = function(msg){
+    return $http({
+      method: 'POST',
+      url: 'api/msg/post',
+      data: msg
+    })
+    .then(function(resp){
+      return resp;
+    });
+  };
+  return {
 
+  };  
+})
 
 .factory('Auth', function ($http, $location, $window) {
   
