@@ -28,7 +28,7 @@ angular.module('ChatWithMe.auth', ['firebase'])
         console.log("Login Fail", error.message);
       } else {
         console.log("AuthData ", authdata);
-        $location.path('/signup');
+        $location.path('/post');
       }
     });
   };
