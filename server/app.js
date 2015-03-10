@@ -14,6 +14,16 @@ app.use(express.static('client'));
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
 
+//Post request for sign in
+app.post('/api/users/signin', function(req, res){
+  new User({'username': req.body.email}).fetch().then(function(found){
+      if(found){
+        res.send(200, found);
+      } else {
+        res.send(404, "User doesn't exist");
+      }
+    });
+});
 //Post request for new user sign up
 app.post('/api/users/signup', function(req, res){
   new User({'username': req.body.email}).fetch().then(function(found){
@@ -43,8 +53,6 @@ app.post('/api/msg/post', function(req, res){
     res.send(201, 'Message posted');
   });
 });
-
-//Post request for sign in
 
 
 

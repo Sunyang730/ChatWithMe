@@ -1,5 +1,5 @@
 angular.module('ChatWithMe.auth', [])
-.controller('AuthController', function($scope, $location, Auth){
+.controller('AuthController', function($scope, $window, $location, Auth){
   $scope.user = {};
   
   $scope.signup = function(){
@@ -12,18 +12,16 @@ angular.module('ChatWithMe.auth', [])
   };
 
   $scope.signin = function(){
-    console.log($scope.user);
-    ref.authWithPassword({
-      email: $scope.user.email,
-      password: $scope.user.password
-    }, function(error, authdata){
-      if(error){
-        console.log("Login Fail", error.message);
-      } else {
-        console.log("AuthData ", authdata);
+    Auth.signin($scope.user)
+      .then(function(data){
+        $window.localStorage.setItem('userId', data.data.id);
+        $window.localStorage.setItem('poCoin', data.data.po_coin);
         $location.path('/post');
-      }
-    });
+      })
+      .catch(function(error){
+        $location.path('/signup');
+
+      });
   };
 });
 
