@@ -1,5 +1,5 @@
 angular.module('ChatWithMe.auth', ['firebase'])
-.controller('AuthController', ['$scope', '$firebaseArray', function($scope, $firebaseArray){
+.controller('AuthController', ['$scope', '$location', '$firebaseArray', function($scope, $location, $firebaseArray){
   var ref = new Firebase("https://chatwithmehr.firebaseio.com/");
   $scope.user = {};
   
@@ -18,5 +18,19 @@ angular.module('ChatWithMe.auth', ['firebase'])
     
   };
 
+  $scope.signin = function(){
+    console.log($scope.user);
+    ref.authWithPassword({
+      email: $scope.user.email,
+      password: $scope.user.password
+    }, function(error, authdata){
+      if(error){
+        console.log("Login Fail", error.message);
+      } else {
+        console.log("AuthData ", authdata);
+        $location.path('/signup');
+      }
+    });
+  };
 }]);
 
