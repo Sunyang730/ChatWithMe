@@ -19,8 +19,14 @@ app.post('/api/users/signup', function(req, res){
 });
 
 app.post('/api/msg/post', function(req, res){
-  console.log(req.body);
-  res.send(200, 'I got you');
+  var pmsg = new Pmsg({
+    'user_id' :req.body.userid,
+    'pmsg' : req.body.msg
+  });
+  pmsg.save().then(function(newMsg){
+    Pmsgs.add(newMsg);
+    res.send(201, 'Message posted');
+  });
 });
 
 

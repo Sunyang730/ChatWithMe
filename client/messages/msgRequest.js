@@ -2,8 +2,9 @@ angular.module('ChatWithMe.msgRequest', [])
   .controller('MsgRequest', function($scope, Msg){
     $scope.msg = {};
     $scope.postMsg = function(){
+      $scope.msg.userid = 1;
       Msg.post($scope.msg).then(function(data){
-        console.log(data);
+      
       });
     };
   });
