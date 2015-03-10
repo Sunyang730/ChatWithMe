@@ -16,7 +16,7 @@ angular.module('ChatWithMe.auth', [])
       .then(function(data){
         $window.localStorage.setItem('userId', data.data.id);
         $window.localStorage.setItem('poCoin', data.data.po_coin);
-        $location.path('/post');
+        $location.path('/dashboard');
       })
       .catch(function(error){
         $location.path('/signup');

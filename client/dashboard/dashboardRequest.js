@@ -1,4 +1,7 @@
 angular.module('ChatWithMe.dashboard', [])
-  .controller('DashBoard', function($scope){
-    
+  .controller('Dashboard', function($scope, $location){
+
+    $scope.post = function(){
+      $location.path('/post');
+    };
   });

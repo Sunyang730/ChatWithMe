@@ -31,7 +31,7 @@ h1, h2, h3 {
   font-size: 15px;
 }
 
-.signUp, .signIn, .send {
+.signUp, .signIn, .send, .option{
   display:block;
   color: #FFF;
   font-size: 15px;
@@ -46,7 +46,7 @@ h1, h2, h3 {
 
 }
 
-.signUp:hover, .signUp:hover, .send{
+.signUp:hover, .signUp:hover, .send:hover, .option:hover{
   background-image: -webkit-linear-gradient(top,#4FD78A,#0BC45B);
 }
 
