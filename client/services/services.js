@@ -10,9 +10,21 @@ angular.module('ChatWithMe.services', [])
       return resp;
     });
   };
-  return {
-    post: post
 
+  var getUserMsg = function(userid){
+    return $http({
+      method: 'GET',
+      url: '/api/msg/getUserMsg',
+      params: {'userid': userid}
+    })
+    .then(function(resp){
+      return resp;
+    });
+  };
+
+  return {
+    post: post,
+    getUserMsg: getUserMsg
   };  
 })
 
