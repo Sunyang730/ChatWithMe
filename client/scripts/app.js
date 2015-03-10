@@ -18,6 +18,10 @@ angular.module('ChatWithMe', [
       templateUrl: 'messages/post.html',
       controller: 'MsgRequest'
     })
+    .when('/dashboard', {
+      templateUrl: 'dashboard/dashboard/html',
+      controller: 'Dashboard'
+    })
     .otherwise({
       templateUrl: 'auth/signin.html',
       controller: 'AuthController'
