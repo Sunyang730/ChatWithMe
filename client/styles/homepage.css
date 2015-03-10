@@ -31,7 +31,7 @@ h2 {
   font-size: 15px;
 }
 
-.signUp {
+.signUp, .signIn {
   display:block;
   color: #FFF;
   font-size: 15px;
@@ -46,6 +46,11 @@ h2 {
 
 }
 
-.signUp:hover{
+.signUp:hover, .signUp:hover{
   background-image: -webkit-linear-gradient(top,#4FD78A,#0BC45B);
+}
+
+a{
+  display: block;
+  text-align: center;
 }

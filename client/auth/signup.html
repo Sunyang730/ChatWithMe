@@ -1,0 +1,18 @@
+<h2>Sign up</h2>
+<div class="container">
+  <form ng-submit="signup()">
+    <input 
+      ng-model='user.email'
+      class="inputBox" 
+      type="text" 
+      placeholder="Email" >
+    <input
+      ng-model="user.password" 
+      class="inputBox" 
+      type="password" 
+      placeholder="Password">
+    <button class="signUp">Sign up</button>
+    
+  </form>
+</div>
+<a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>
