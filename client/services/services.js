@@ -25,7 +25,7 @@ angular.module('ChatWithMe.services', [])
       data: user
     })
     .then(function (resp) {
-      return resp.data.token;
+      return resp;
     });
   };
 
@@ -36,7 +36,7 @@ angular.module('ChatWithMe.services', [])
       data: user
     })
     .then(function (resp) {
-      return resp.data.token;
+      return resp;
     });
   };
 

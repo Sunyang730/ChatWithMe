@@ -1,11 +1,14 @@
 angular.module('ChatWithMe.auth', [])
-.controller('AuthController', function($scope, Auth){
+.controller('AuthController', function($scope, $location, Auth){
   $scope.user = {};
   
   $scope.signup = function(){
-    Auth.signup($scope.user).then(function(data){
-      console.log(data);
-    });
+    Auth.signup($scope.user)
+      .then(function(data){
+      })
+      .catch(function(error){
+        $location.path('/');
+      });
   };
 
   $scope.signin = function(){

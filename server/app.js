@@ -14,10 +14,25 @@ app.use(express.static('client'));
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
 
+//Post request for new user sign up
 app.post('/api/users/signup', function(req, res){
-  res.send('I like you');
+  new User({'username': req.body.email}).fetch().then(function(found){
+    if(found){
+      res.send(409, "User exist");
+    } else {
+      var user = new User({
+        'username': req.body.email,
+        'password': req.body.password,
+      });
+      user.save().then(function(newUser){
+        Users.add(newUser);
+        res.send(201, newUser);
+      });      
+    }
+  });
 });
 
+//POST request for messages
 app.post('/api/msg/post', function(req, res){
   var pmsg = new Pmsg({
     'user_id' :req.body.userid,
@@ -28,6 +43,9 @@ app.post('/api/msg/post', function(req, res){
     res.send(201, 'Message posted');
   });
 });
+
+//Post request for sign in
+
 
 
 
