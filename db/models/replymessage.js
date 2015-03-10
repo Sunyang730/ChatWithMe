@@ -3,7 +3,7 @@ var Pmsg = require('./postmessage');
 var crypto = require('crypto');
 var User = require('./user');
 
-var rmsg = db.Model.extend({
+var Rmsg = db.Model.extend({
   tableName: 'replymessages',
   hasTimestamps: true,
   
@@ -16,4 +16,4 @@ var rmsg = db.Model.extend({
   
 });
 
-module.exports = rmsg;
+module.exports = Rmsg;

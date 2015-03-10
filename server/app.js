@@ -3,12 +3,12 @@ var bodyParser = require('body-parser');
 var app = express();
 
 var db = require('../db/config');
-var User = require('../db/models/user');
-var Pmsg = require('../db/models/postmessage');
-var Rmsg = require('../db/models/replymessage');
 var Users = require('../db/collections/users');
+var User = require('../db/models/user');
 var Pmsgs = require('../db/collections/postmessages');
+var Pmsg = require('../db/models/postmessage');
 var Rmsgs = require('../db/collections/replymessages');
+var Rmsg = require('../db/models/replymessage');
 
 app.use(express.static('client'));
 app.use(bodyParser.urlencoded({ extended:true }));
@@ -56,8 +56,11 @@ app.post('/api/msg/post', function(req, res){
 
 //Get request for user messages
 app.get('/api/msg/getUserMsg', function(req, res){
-  console.log(req.query);
-  res.send(200);
+  new Pmsg({'user_id': req.query.userid}).fetchAll()
+    .then(function(msgs){
+      var parseMsgs = msgs.toJSON();
+      res.send(200, parseMsgs);
+    });
 });
 
 
