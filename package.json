@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/Sunyang730/ChatWithMe",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^2.9.13",
     "express": "^4.12.2"
   }
 }
