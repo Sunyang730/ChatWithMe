@@ -4,8 +4,8 @@ var db = Bookshelf.initialize({
   client: 'mysql',
   connection: {
     host: '127.0.0.1',
-    user: 'your_database_user',
-    password: 'password',
+    user: 'root',
+    password: '',
     database: 'ChatWithMe',
     charset: 'utf8',
   }

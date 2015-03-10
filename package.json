@@ -23,6 +23,9 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "bluebird": "^2.9.13",
-    "express": "^4.12.2"
+    "bookshelf": "^0.7.9",
+    "express": "^4.12.2",
+    "knex": "^0.7.5",
+    "mysql": "^2.5.5"
   }
 }

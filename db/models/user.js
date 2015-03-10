@@ -1,8 +1,8 @@
 var db = require('../config');
 var bcrypt = require('bcrypt-nodejs');
 var Promise = require('bluebird');
-var Pmsg = require('postmessage');
-var Rmsg = require('replymessage');
+var Pmsg = require('./postmessage');
+var Rmsg = require('./replymessage');
 
 var User = db.Model.extend({
 
