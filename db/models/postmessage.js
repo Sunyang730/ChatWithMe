@@ -10,6 +10,9 @@ var pmsg = db.Model.extend({
   user: function() {
     return this.belongsTo(User, 'user_id');
   },
+  rmsg: function() {
+    return this.hasOne(Rmsg);
+  }
   
 });
 
