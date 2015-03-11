@@ -1,6 +1,6 @@
 angular.module('ChatWithMe.dashboard', [])
   .controller('Dashboard', function($scope, $location, $window, Msg){
-    $scope.userMsgs = [];
+    $scope.msgs = [];
     $scope.hide = true;
     $scope.pocoin = $window.localStorage.getItem('poCoin');
    
@@ -8,10 +8,10 @@ angular.module('ChatWithMe.dashboard', [])
       $location.path('/post');
     };
 
-    $scope.getUserMsg = function(){
+    $scope.getUserMsgs = function(){
       var userid = $window.localStorage.getItem('userId');
       Msg.getUserMsg(userid).then(function(response){
-        $scope.userMsgs = response.data;
+        $scope.msgs = response.data;
       });
     };
     $scope.showForm = function(){
@@ -20,6 +20,10 @@ angular.module('ChatWithMe.dashboard', [])
       } else {
         this.hide = true;
       }
+    };
+
+    $scope.getRanMsgs = function(){
+
     };
 
 

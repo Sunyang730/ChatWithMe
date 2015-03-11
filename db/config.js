@@ -30,6 +30,7 @@ db.knex.schema.hasTable('postmessages').then(function(exists) {
     db.knex.schema.createTable('postmessages', function (pmsg) {
       pmsg.increments('id').primary();
       pmsg.integer('user_id');
+      pmsg.integer('rmsg_id');
       pmsg.string('pmsg');
       pmsg.timestamps();
     }).then(function (table) {
@@ -43,6 +44,7 @@ db.knex.schema.hasTable('replymessages').then(function(exists) {
     db.knex.schema.createTable('replymessages', function (rmsg) {
       rmsg.increments('id').primary();
       rmsg.string('rmsg');
+      rmsg.integer('pmsg_id');
       rmsg.integer('user_id');
       rmsg.timestamps();
     }).then(function (table) {

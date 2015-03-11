@@ -2,12 +2,12 @@
 <h2> Admin </h2>
 <h3>You have {{pocoin}} po.coin !</h3>
 <div class = "container">
-  <button class="option" ng-click="getUserMsg()">Reponses to me from people</button>
+  <button class="option" ng-click="getUserMsgs()">Reponses to me from people</button>
   <button class="option" ng-click="">People's post</button>
   <button class="option" ng-click="post()">Post New Message</button>
 </div>
-<div>
-<div class="container" ng-repeat="msg in userMsgs">  
+
+<div class="container" ng-repeat="msg in msgs">  
   <button class="send" ng-click="showForm()"> {{msg.pmsg}} </button>
   <form ng-submit="replyMsg()" ng-hide="hide">
     <input class="inputBox">

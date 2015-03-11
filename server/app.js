@@ -59,6 +59,7 @@ app.get('/api/msg/getUserMsg', function(req, res){
   Pmsg.query({where: {user_id: req.query.userid}}).fetchAll()
     .then(function(msgs){
       var parseMsgs = msgs.toJSON();
+      console.log(parseMsgs);
       res.send(200, parseMsgs);
     });
 });
