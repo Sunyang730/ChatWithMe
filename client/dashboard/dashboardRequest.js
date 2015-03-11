@@ -2,6 +2,7 @@ angular.module('ChatWithMe.dashboard', [])
   .controller('Dashboard', function($scope, $location, $window, Msg){
     $scope.userMsgs = [];
     $scope.hide = true;
+    $scope.pocoin = $window.localStorage.getItem('poCoin');
    
     $scope.post = function(){
       $location.path('/post');
