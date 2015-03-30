@@ -30,8 +30,18 @@ h1, h2, h3 {
   padding: 0 8px;
   font-size: 15px;
 }
-
-.signUp, .signIn, .send {
+.textBox {
+  display:block;
+  border: 1px solid;
+  border-color: rgb(224, 224, 224);
+  height: 150px;
+  width: 274px;
+  margin: auto;
+  border-radius: 1px;
+  padding: 0 8px;
+  font-size: 15px;
+}
+.signUp, .signIn, .send, .option{
   display:block;
   color: #FFF;
   font-size: 15px;
@@ -46,7 +56,7 @@ h1, h2, h3 {
 
 }
 
-.signUp:hover, .signUp:hover, .send{
+.signUp:hover, .signUp:hover, .send:hover, .option:hover{
   background-image: -webkit-linear-gradient(top,#4FD78A,#0BC45B);
 }
 

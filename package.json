@@ -19,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/Sunyang730/ChatWithMe/issues"
   },
-  "homepage": "https://github.com/Sunyang730/ChatWithMe"
+  "homepage": "https://github.com/Sunyang730/ChatWithMe",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^2.9.13",
+    "body-parser": "^1.12.0",
+    "bookshelf": "^0.7.9",
+    "express": "^4.12.2",
+    "knex": "^0.7.5",
+    "mysql": "^2.5.5"
+  }
 }

@@ -1,5 +1,8 @@
 angular.module('ChatWithMe', [
+  'ChatWithMe.services',
   'ChatWithMe.auth',
+  'ChatWithMe.msgRequest',
+  'ChatWithMe.dashboard',
   'ngRoute'
   ])
 .config(function($routeProvider){
@@ -14,7 +17,11 @@ angular.module('ChatWithMe', [
     })
     .when('/post', {
       templateUrl: 'messages/post.html',
-      controller: 'AuthController'
+      controller: 'MsgRequest'
+    })
+    .when('/dashboard', {
+      templateUrl: 'dashboard/dashboard.html',
+      controller: 'Dashboard'
     })
     .otherwise({
       templateUrl: 'auth/signin.html',
