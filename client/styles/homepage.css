@@ -4,7 +4,7 @@ body {
   align-items:center;
   justify-content:center;*/
 }
-h2 {
+h1, h2, h3 {
   text-align: center;
 }
 .container {
@@ -31,7 +31,7 @@ h2 {
   font-size: 15px;
 }
 
-.signIn {
+.signUp, .signIn, .send {
   display:block;
   color: #FFF;
   font-size: 15px;
@@ -46,6 +46,11 @@ h2 {
 
 }
 
-.signIn:hover{
+.signUp:hover, .signUp:hover, .send{
   background-image: -webkit-linear-gradient(top,#4FD78A,#0BC45B);
+}
+
+a{
+  display: block;
+  text-align: center;
 }

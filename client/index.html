@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ChatWithMe">
 <head>
   <meta charset="utf-8">
   <title>ChatWithMe</title>
@@ -7,16 +7,18 @@
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <h2>Sign in</h2>
-	<div class = "container">
-		<form action="">
-			<input class="inputBox" type="text" placeholder="Username">
-			<input class="inputBox" type="password" placeholder="Password">
-			<input class="signIn" type="button" value="Sign in">
+  
 
-			<script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
-			<script src='scripts/script.js' type='text/javascript'></script>
-		</form>
-	</div>
+  <div ng-view></div>
+
+
+	<script src='../bower_components/angular/angular.js' type='text/javascript'></script>
+	<script src='../bower_components/angular-route/angular-route.js' type='text/javascript'></script>
+
+	<script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+	<script src='scripts/angularScript.js' type='text/javascript'></script>
+	<script src='scripts/app.js' type='text/javascript'></script>
+
 </body>
 </html>
